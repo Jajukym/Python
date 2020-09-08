@@ -1,0 +1,21 @@
+The program can’t start because VCRUNTIME140.DLL is missing from your computer
+When opening an app on your Windows computer, if you have encountered an error – The program can’t start because VCRUNTIME140.DLL is missing from your computer, here are a few things you need to follow to troubleshoot & fix this problem. This occurs when the program you are trying to run requires the VCRUNTIME140.DLL file to be present on your computer system.  VCRUNTIME140.DLL is a Microsoft C Runtime Library application extension of os size around 86 KB, located in the System32 folder, and is installed by Microsoft Visual Studio. If any DLL file goes missing or gets corrupted, you can see such error messages on your screen.
+
+"VCRUNTIME140.DLL is missing"
+
+VCRUNTIME140.DLL is missing
+DLL stands for Dynamic Link Libraries and are external parts of applications that run on Windows or any other operating systems. Most applications are not complete in themselves and store code in different files. If there is a need for the code, the related file is loaded into memory and used. If the OS or software is not able to find the concerned DLL file, or if the DLL file is corrupted, you could receive a DLL file is missing message.
+
+If the DLL file is present on your computer, but you still receive this error message, you may need to re-register the DLL file. Also, run the System File Checker to replace potentially corrupted system files.
+
+If the DLL file is missing, then downloading the missing dll file from the internet and pasting it to a particular place is not the actual solution. You can try that method, but you may not get any positive result from it.
+
+Reinstalling the program that is throwing up this error may help, so try it. Perhaps its installation package includes this file.
+
+The other option to solve this problem is to install Microsoft Visual C++ Redistributable for Visual Studio on your computer.
+
+Close all your open application using the program window or the Task Manager. Having done this, you can go and download it from Microsoft. Install the Runtime component and restart your computer and see.
+
+You may want to also run an antivirus scan. VCRUNTIME140.DLL if located in the System32 folder is the legitimate OS file. If it is located anywhere else, it could well be malware.
+
+It should have helped, and the error message should not appear.
