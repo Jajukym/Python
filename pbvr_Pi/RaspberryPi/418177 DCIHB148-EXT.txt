@@ -1,0 +1,65 @@
+DCIHB148-EXT
+#418177
+
+Tools needed:
+
+Raspberry Pi 3b
+RASBIAN OS
+sb_utils-master folder
+MicroUSB Power Cord
+Keyboard
+Mouse
+HDMI Cable
+Monitor w/ HDMI
+DSD TECH USB to 485/422 adapter
+2x4-pin to 3-pin Harness (485Comm)
+10-pin to 2-pin Harness (tach)
+Resistance Motor (193223)
+EQWxxxx
+Incline motor (412134)
+EQWxxxx
+32VDC Power Supply
+EQWxxxx
+
+
+
+Inital setup:
+Connect monitor to Pi
+Connect key board and mouse to Pi (I use Logitech K400r and K400+ wireless) 
+Connect 2x4-pin to 3-pin harness to DSD TECH USB to 485/422 adapter (1-2, 2-1, 7-5)
+Connect 10-pin to 2-pin harness to Pi pin 1 to pin 1
+Connect the MicroUSB Power Cord to the Pi and follow setup instructions provide with the Pi kit
+Connect EQWxxxx to the incline motor
+Connect EQWxxxx to the resistance motor
+Open lxterminal and type "sudo systemctl enable pigpiod" then hit enter
+Copy sb_utils-master folder from RNDftp
+
+Test setup:
+Boot up the Pi
+Once Pi boots to desktop, plug in DSD TECH USB to 485/422 adapter
+Open sb_utils-master485 folder
+Double click on 485_test.py file and open
+Fully expand the Thonny screen and drag up the bottom view
+
+Test 485:
+Check packaging
+Check cosmetics
+Connect resistance motor to the power board (HD6)
+Connect the inclne motor to the power board (HD15)
+Connect the 2x4-pin to 3-pin harness to the power board (HD1 or HD2)
+Connect the 10-pin to 2-pin harness to the power board (HD8)
+Connect the 32VDC power supply to the powerboard (HD3)
+
+On the Thonny screen, click green play button
+Each function of the test will display with response
+If there is no read, fail the part
+
+Disconnect the 32VDC power supply
+Disconnect all connectors to powerboard
+Repeat "Test 485"
+
+
+
+Rev-	11-08-19	Initial release. BL
+
+

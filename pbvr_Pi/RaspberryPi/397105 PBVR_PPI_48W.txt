@@ -1,0 +1,61 @@
+PBVR_PPI_422_48W
+#397105
+
+Tools needed:
+
+Raspberry Pi 3b
+RASBIAN OS
+sb_utils-master folder
+MicroUSB Power Cord
+Keyboard
+Mouse
+HDMI Cable
+Monitor w/ HDMI
+DSD TECH USB to 485/422 adapter
+6-pin Harness
+10-pin to 5-pin Harness
+Resistance Motor (193223)
+Incline motor (390832)
+EQF1283
+
+
+
+Inital setup:
+Connect monitor to Pi
+Connect key board and mouse to Pi (I use Logitech K400r and K400+ wireless)
+Connect 6-pin harness to DSD TECH USB to 485/422 adapter (2-5, 3-4, 4-3, 5-2, 6-1)
+Connect 10-pin to 5-pin harness to Pi pin 1 pt pin 1
+Connect the MicroUSB Power Cord to the Pi and follow setup instructions provide with they Pi kit
+Open lxterminal and type "sudo systemctl enable pigpiod" then hit enter
+Copy sb_utils-master folder from RNDftp
+
+Test setup:
+Boot up the Pi
+Once Pi boots to desktop, plug in DSD TECH USB to 485/422 adapter
+Open sb_utils-master folder
+Double click on 422_test.py file and open
+Fully expand the Thonny screen and drag up the bottom view
+
+Test 422:
+Check packaging
+Check cosmetics
+Connect EQF1283 to the power board (LG1, LG2, LG3)
+Connect resistance motor to the power board (HD6)
+Connect the inclne motor to the power board (HD7, HD11)
+Connect the 6-pin harness to the power board (HD3)
+Connect the 5-pin harness to the power board (HD2)
+turn on power switch from EQF1283
+
+On the Thonny screen, click green play button
+Each function of the test will display with response
+If there is no recieve, fail the part
+
+turn off power switch from EQF1283
+Disconnect all connectors to powerboard
+Repeat "Test 422"
+
+
+
+Rev-	09-27-18	Initial release. BL
+
+
