@@ -1,0 +1,6 @@
+1. Open the sb_utils-master485 folder
+2. Open the 485_test.py file - file opens the Thonny program
+3. Connect the sample to be tested
+4. Press F5 on the keyboard to execute the test
+5. View the test results in the Shell window of the Thonny program
+6. Repeat steps 3 to 5 for each additional sample to be tested

@@ -1,0 +1,18 @@
+05815.
+entername
+EQF1259 App Procedures.x
+MealPlan.
+MealPlanMMDDYYYY.x
+mealplanner
+Meals.x
+movies.
+names.
+new 1.
+picknames
+print
+sort
+test1
+x.
+xmlparser
+xmlparser_ProcedureGenerator_2.7.11.20171026.2358
+xmlparser_ProcedureGenerator_FeatureInfo
