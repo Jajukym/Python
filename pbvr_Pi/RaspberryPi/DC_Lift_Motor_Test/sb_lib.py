@@ -13,30 +13,38 @@ import numpy as np
 
 
 def transmax():
+    global aa #partnumber
+    global bb #screwlength
+    global cc #transmax
     partnumber = ["419474", "415172", "415473", "415904", "423419"]
     transmax = np.array([2.48, 2.85, 4.25, 7.01, 6.35])
     i = 0
     aa = 0
-    global cc
     pn = ""
     pn = input("Enter Part Number:")
     while pn != aa:
         aa = (partnumber[i])
-        print(aa)
-        print(i)
+        #print(aa)
+        #print(i)
         i += 1
         if pn == aa:
             bb = (transmax[i-1])
             cc = (432*(bb))*2
-            print(i - 1)
-            print(cc)
+            #print(i - 1)
+            #print(cc)
             break
         elif i == 5:
             print("Part number is not listed")
             break
+
 def wait():
-    if v != 65534:
-        
+    #print("\n")
+    #print(bb,"inches")
+    xx = (bb * 4.5)*2.5
+    #print("\n")
+    #print(xx,"seconds")
+    time.sleep(xx)
+
 if os.name == 'nt':
     class bcolors:
         HEADER = ''
@@ -136,12 +144,18 @@ def printSBdata(msg):
     if(i<9 or j == -1):
         return
     if l <= 2:
-        global v = int(msg[i:i+l*2],16)
+        v = int(msg[i:i+l*2],16)
     else:
         v = int(msg[i:i+4],16)
     print("\n returned: ",v," (", hex(v),")")
-    #zz = v - cc
-    #print (zz)
+    
+    yy = 350 #upper tolerance
+    zz = v - cc #difference of Actual vs Stated
+    if zz < yy: #upper tolerance check
+        print("---------------PASS---------------")
+    else:
+        print("---------------FAIL---------------")
+    
     for k in range(4,j-i,4):
         v = int(msg[i+k:i+k+4],16)
         print("           ",v," (", hex(v),")")
@@ -189,7 +203,6 @@ def show(msg):
     print(msg[j:j+2].decode('utf-8'), end="")
     #print("0x%2s 0x%2s" %(binascii.hexlify(msg[4:6]).decode('utf-8'), binascii.hexlify(msg[6:8]).decode('utf-8') ), end=" ")
 
-
 def consume(iterator, n):
     "Advance the iterator n-steps ahead. If n is none, consume entirely."
     # Use functions that consume iterators at C speed.
@@ -215,8 +228,6 @@ def isreply(msg):
     if msg[6] != 48: #check for reserved byte or length
         return True
     return False
-
-
 
 # finds the length to end of the message or the byte before the next begins (if cutoff), this assumes the first byte is the start of a message
 def findmsgEnd(msg):

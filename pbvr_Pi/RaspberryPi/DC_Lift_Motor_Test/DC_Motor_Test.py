@@ -53,26 +53,27 @@ while cyc < smpl:
     print("                  DC Lift Test#: ", (cyc + 1))
     print("----------------------------------------------------")
     sb_lib.sendMsg(ser,"41 5 10")#set transmax to ~0
-    #sb_lib.sendMsg(ser,"41 11")
-    #loop 3 times
     sb_lib.sendMsg(ser,"41 a 1")#push
     time.sleep(2)
+    print("\n---------------Pause and push----------------")
     sb_lib.sendMsg(ser,"41 4 1")#pause
-    time.sleep(3)
+    time.sleep(2)
     sb_lib.sendMsg(ser,"41 a 1")#push
-    time.sleep(3)
+    time.sleep(2)
+    sb_lib.sendMsg(ser,"41 4 1")#stop
+    
+    print("\n---------------Wait for calibration----------------")
     sb_lib.sendMsg(ser,"41 3 1")#calibrate
-    #sb_lib.wait()
-    time.sleep (50)#timer for calibration
-    #sb_lib.sendMsg(ser,"41 5")
-    print("\n---------------Transmax Verify----------------")
+    sb_lib.wait()
 
+    print("\n---------------Transmax Verify----------------")
     st = "41 5"
     m = bytearray(b"")
     m = sb_lib.sendMsg(ser,st)
-    print(m)
     if(len(m)):
         sb_lib.printSBdata(m)
+        #data = sb_lib.breakupSBdata(m)[0]
+        #print(data)       
     cyc += 1
     cont = input("Enter To Continue. 'n' To End")
     if cont == "n":
