@@ -103,7 +103,7 @@ print("Starting Incline test....")
 print("-------------------------")
 sb_lib.sendMsg(ser, "41 1 0")
 i = 0
-while sb_lib.getSBdata(sb_lib.sendMsg(ser, "41 2")) != 0 and i<100:
+while sb_lib.getSBdata(sb_lib.sendMsg(ser, "41 2")) != 0 and i<95:
     time.sleep(0.2)
     print("Bottom Seeking.....")
     i+=1

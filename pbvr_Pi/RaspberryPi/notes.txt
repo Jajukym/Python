@@ -1,0 +1,89 @@
+
+Setup
+1.调节EQF1144测试治具的杠杆臂，使其完全伸出提升马达螺丝。
+2.放置144磅。 位于EQF1144杠杆臂长端上的T型杆上的重量。 有了这个重量加上T型杆的重量，电动机在短端将起重900磅。
+3.将EQW1297的一端连接到EQF1297，另一端连接到HD1或HD2。
+4.将EQWxxxx的一端连接到DCIH148_EXT，另一端连接到36VDC电源。
+5.将EQWxxxx的一端连接到DCIH148_EXT。
+6.打开EQF1297_RaspberryPi_3b夹具，然后打开DC_LiftMotor测试应用程序。
+7.将36VDC电源插入交流电源插座。
+4.在屏幕上输入零件号。
+5.在屏幕上输入样本量。
+1. Adjust the lever arm of the EQF1144 Test Fixture to allow full extension of the lift motor screw.
+2. Place 144lbs. of weights on the T-bar that is located on the long end of the lever arm of the EQF1144. With this weight plus the weight of the T-bar the motor will be lifting the equivalent of 900lbs on the short end.
+3. Connect one end of the EQW1297 to the EQF1297 and the other end to HD1 or HD2.
+4. Connect one end of the EQWxxxx to the DCIH148_EXT and the other end to the 36VDC power supply.
+5. Connect one end of the EQWxxxx to the DCIH148_EXT.
+6. Turn on the EQF1297_RaspberryPi_3b fixture and open the DC_LiftMotor test app.
+7. Plug the 36VDC power supply into the AC outlet.
+4. Enter the part number on the screen.
+5. Enter the sample size on the screen.
+
+Hookup
+1.在“推”位置将电动机安装在EQF-1144举升装置上。 这是通过将电动机的管端放在标有“ push”（推）的支架上，并将电动机的螺纹轴插入测试夹具的杠杆臂上来完成的。
+2.将EQWxxxx_DC_LiftMotor_Extension线束连接到电动机。
+1. Mount the motor on the EQF-1144 lift fixture in the Push position. This is done by putting the tube end of the motor on the bracket marked push and the threaded shaft on the motor to the lever arm of the test fixture.
+2. Connect EQWxxxx_DC_LiftMotor_Extension harness to the motor.
+
+Equipment
+EQF1297_RaspberryPi_3b
+EQW1297_DCIH148_EXT线束
+EQWxxxx（）
+EQWxxxx（）
+DCIH148_EXT（418177）
+36VDC电源
+DC_LiftMotor测试应用
+EQF1297_RaspberryPi_3b
+EQW1297_DCIH148_EXT Harness
+EQWxxxx()
+EQWxxxx()
+DCIH148_EXT (418177)
+36VDC Power Supply
+DC_LiftMotor Test App
+
+1.确认螺纹轴与孔的底部边缘对齐。
+2.使用游标卡尺测量并记录从安装孔外部到轴孔外部的缩回长度。
+1. Verify that the threaded shaft is in line with the bottom edge of the hole.
+2. Using calipers measure and record the retracted length from the outside of the mounting hole to the outside of the shaft hole.
+
+WeightLift
+1.按Enter键开始提升测试。
+2.验证通过/失败。
+1. Press Enter to start the lift test.
+2. Verify pass/fail.
+
+
+
+
+
+419474		2.48
+415172		2.85
+415173		4.25
+415904		7.01
+423419		6.35
+
+
+
+
+word = '123456-qq00qq00000'
+
+len = len(word)
+if len == 18
+
+	# Splitting at 3 
+	print([word[i:i+6] for i in range(0, len(word), 6)]) 
+	print(word[0:0+6])
+	break
+
+
+
+
+def findLen(str): 
+    counter = 0    
+    for i in str: 
+        counter += 1
+    return counter 
+  
+  
+str = "geeks"
+print(findLen(str)) 

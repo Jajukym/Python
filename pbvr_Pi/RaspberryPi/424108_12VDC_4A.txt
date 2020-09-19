@@ -1,0 +1,21 @@
+424108_12VDC_4A power supply
+
+EQF1283 VAC Switch Box
+426081 VAC Harness
+Custom 9ohm/200W Resistor Harness
+Multimeter w/ Banana Jacks
+
+Setup:
+Connect one end of the EQF1283 to the 426081 harness.
+Connect one end of the banana jacks to the custom resistor harness
+Set multimeter to measure DC voltage
+
+
+Test:
+Verify ESD packaging.
+Connect the custom resistor harness to the power supply.
+Connect the 426081 harness to the power supply.
+Switch on the EQF1283.
+Verify that 12VDC is measured on the multimeter.
+Switch off the EQF1283.
+Disconnect the power supply and repeat test for the rest of the sample.
