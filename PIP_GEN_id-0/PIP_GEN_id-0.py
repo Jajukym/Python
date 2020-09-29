@@ -36,7 +36,7 @@ controller = ["TREAD_TACH", "MC1650LS_2W", "MC1618DLS", "MC1618DLS_JST", "MC1648
               "MC2100ELS_50W_2Y", "MC5100DTS_18W", "MC5100DTS_50W", "MC5100DTS3_50W", "MC5100EDS_50W_V1",#18
               "MC5100EDS3_50W_V1", "MC5150HCL", "OLYMPUS_V1", "TIMPANOGOS", "RHYMEBUS_RM", "DELTA GOES HERE", "BASIC_BIKE",#25
               "PB_INC_18W", "PB_INC_50W", "PB_INC_485_18W", "PB_INC_485_50W", "PB_PPI_485_18W", "PB_PPI_485_48W",#31
-              "PBCLA_2X50W_75W", "PBCLA_FM_32_12V"]; #0-18 home units, 21-24 club units, 25-33 bike and elliptical
+              "PBCLA_2X50W_75W", "PBCLA_FM_32_12V", "KIWI"]; #0-18 home units, 21-24 club units, 25-33 bike and elliptical, 34 KIWI
 
 voltage = ["0", "6", "9", "12"];
 resistance = ["ADC"];
@@ -217,12 +217,17 @@ rev["B23"] = "20191001"
 rev["C23"] = "added .json generator"
 rev["D23"] = "Ross Bunnell and id-0"
 
-rev["A24"] = "V.x"
-rev["B24"] = str(datetime.now())
-rev["C24"] = "Fiat justitia ruat caelum"
+rev["A24"] = "V.23"
+rev["B24"] = "20200921"
+rev["C24"] = "Added the KIWI board"
 rev["D24"] = "id-0"
 
-print (rev["a23"].value, rev["b23"].value, rev["c23"].value, rev["d23"].value, "\n\n")
+rev["A25"] = "V.x"
+rev["B25"] = str(datetime.now())
+rev["C25"] = "Fiat justitia ruat caelum"
+rev["D25"] = "id-0"
+
+print (rev["a24"].value, rev["b24"].value, rev["c24"].value, rev["d24"].value, "\n\n")
 
 
 for col in rev.columns:
@@ -553,7 +558,7 @@ class Device( xml.sax.ContentHandler ):
             sta["i2"] = chi["c17"].value + "\n\n" + eng["c17"].value
             sta["z2"].alignment = Alignment(wrap_text = True) #Power up
             sta["z2"] = chi["h18"].value + "\n\n" + eng["h18"].value
-         if Value == controller[20]:
+         if Value == controller[20] or Value == controller[34]:
             sta["i2"].alignment = Alignment(wrap_text = True) #Boston 1, Boston 2 will require verification of TV or Upright feature
             sta["i2"] = chi["c6"].value + "\n\n" + eng["c6"].value
             sta["z2"].alignment = Alignment(wrap_text = True) #Power up
