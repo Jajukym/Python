@@ -1,0 +1,15 @@
+{
+  "Setup": "1.将4针的一侧连接至4针连接器至EQF1255，另一侧连接至电源板上的HD3或HD4\n2. EQF1017的连接器电源和HD6的2针转速连接器。或者将簧片线插入HD6\n3.将提升电机主线束连接到HD2\n4.将提升电机霍尔效应传感器连接到HD8（可能需要3个MTA引脚延长线）\n5.将电阻电机连接到电源板的HD7\n6.将电源线热连接到LG1，将中性线连接到LG3，然后接地到LG2 1. Connect one side of 4 pin to 4 pin connector to EQF1255 and other side to HD3 or HD4 on power board\n2. Connector power supply to EQF1017 and 2 pin tach connector to HD6. Or plug in reed wire to HD6\n3. Connect lift motor main harness to HD2\n4. Connect lift motor hall effect sensor to HD8 (may need 3 MTA pin wire extension)\n5. Connect resistance motor to HD7 of power board\n6. Connect power cord hot to LG1, neutral to LG3, and ground to LG2",
+  "SetupImage1": "",
+  "SetupImage2": "",
+  "EquipmentNeeded": "EQF1255\n4针至4针MTA连接器\n推/拉提升电机（390832,400485或其他）\n电阻/张力电机\nEQF1017转速箱带电源或簧片线和磁铁\n电源线\nEQW1020高压线束\nFluke Meter\nEQF1255\n4 zhēn zhì 4 zhēn MTA liánjiē qì\ntuī/lā tíshēng diànjī (390832,400485 huò qítā)\ndiànzǔ/zhānglì diànjī\nEQF1017 zhuǎnsù xiāng dài diànyuán huò huáng piàn xiàn hé cítiě\ndiànyuán xiàn\nEQW1020 gāoyāxiàn shù\nFluke Meter\nEQF1255\n4 pin to 4 pin MTA connector\nPush/Pull lift motor (390832, 400485 , or other)\nResistance / tension motor\nEQF1017 tach box with power supply or reed wire and magnet\nPower cord\nEQW1020 Hipot wire harness\nFluke Meter",
+  "VisualInspection": "1.目视检查电源板是否有任何损坏的部件 1. Visually inspect the power board for any damaged components",
+  "ESDBag": "1. Verify power board is shipped in ESD compliant bag",
+  "PowerUp": "1.将电源线插入电源插座。\n2.确认EQF1255上显示当前软件版本 1. Plug power cord into power outlet.",
+  "FinishTest": "1.断开电源线的电源。\n2从电源板上卸下所有连接，然后重复下一个样品 1. Disconnect power from power cord.\n2 Remove all connections from power board and repeat process for next sample.",
+  "VerifyVoltageOutput": "使用fluke meter，在HD3或HD4的引脚1和2上验证12伏电压 Using fluke meter, verify 12 volts across pins 1 and 2 of HD3 or HD4",
+  "VerifyReedSwitchWire": "1.在电阻屏幕上移动磁铁穿过簧片开关或打开EQF1017\n2.验证RPM更改 1. On the Resistance screen move a magnet across the reed switch or turn on EQF1017\n2. Verify the RPM changes",
+  "Verify485Communication": "确认启动时TX和RX LED闪烁，并显示软件版本。 Verify TX and RX LEDs blink on start up and software version is displayed.",
+  "VerifyInclineMotorFunction": "1.按显示按钮，直到显示倾斜屏幕\n2.将EQF1255旋钮旋转至50，然后按开始按钮\n3.倾斜马达应缩回\n4.将EQF1255 kob旋转至0，然后按开始按钮\n5.倾斜马达应延长 1. Press display button until Incline screen is showing\n2. Rotate EQF1255 knob to 50 and press Start button\n3. Incline motor should retract\n4. Rotate EQF1255 kob to 0 and press Start button\n5. Incline motor should extend",
+  "VerifyResistanceMotorFunction": "1.按EQF1255上的显示按钮，直到显示电阻屏幕。\n2.按下EQF1255上的向下输入旋钮，将其更改为10X\n3.将旋钮转到90并按开始按钮。\n4.电阻电机应移动，电流电阻应增加到90\n5.将旋钮转到20，然后按开始按钮\n6.电阻电机应移动，电流电阻应降至20 1. Press Display button on EQF1255 until Resistance screen is displayed. 2. Press Down on EQF1255 Enter knob to change to 10X\n3. Turn knob to 90 and press start button. 4. Resistance motor should move and current resistance should increase to 90\n5. Turn knob to 20 and press start button\n6. Resistance motor should move and current resistance should decrease to 20"
+}
