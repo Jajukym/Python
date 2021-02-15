@@ -28,7 +28,7 @@ desiredMinIncline = 0
 
 minResistance = 50
 maxResistance = 200
-desiredTach = 90
+desiredTach = 0 #temporary
 
 inclineChange = 4
 inclinePauseTime = 3
@@ -94,7 +94,7 @@ square = []
 
 #                          ON       OFF    MICROS
 square.append(pigpio.pulse(1<<PIN_TACH_OUTPUT, 0,       1000))#113 encoder, 1000 lowrestach
-square.append(pigpio.pulse(0,       1<<PIN_TACH_OUTPUT, 332333))#10 encoder, 333333 lowrestach
+square.append(pigpio.pulse(0,       1<<PIN_TACH_OUTPUT, 199000))#10 encoder, 333333 lowrestach
 
 
 pin_IO = pigpio.pi() # connect to local Pi
@@ -322,7 +322,7 @@ if wid >= 0:
    print()
    print("----------------------------------------------------")
   
-   pin_IO.wave_tx_stop()
-   pin_IO.wave_delete(wid)
+   #pin_IO.wave_tx_stop()
+   #pin_IO.wave_delete(wid)
    
  

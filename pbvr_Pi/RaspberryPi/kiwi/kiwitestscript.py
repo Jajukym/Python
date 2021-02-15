@@ -27,7 +27,7 @@ GPIO.setup(dmk, GPIO.OUT)
 #**********************Setup Serial Port****************
 if os.name == 'nt':
     p = 'COM'
-    i = '1'
+    i = '0'
 else:
     p = '/dev/ttyUSB'
     i = '0' 
@@ -47,8 +47,8 @@ print()
 print("Getting Code Version......") 
 response = sb_lib.sendMsg(ser,"41 F1")
 version = sb_lib.getSBdata(response)
-print("Code Version: ", version)
-if version != 4153:
+print("\nCode Version: ", version) #4153 or 4155
+if version != 4155:
     print()
     print("-------------------------")
     print("Wrong Code Version. Update Hex File")
@@ -103,7 +103,7 @@ print("Starting Incline test....")
 print("-------------------------")
 sb_lib.sendMsg(ser, "41 1 0")
 i = 0
-while sb_lib.getSBdata(sb_lib.sendMsg(ser, "41 2")) != 0 and i<95:
+while sb_lib.getSBdata(sb_lib.sendMsg(ser, "41 2")) != 0 and i < 85:
     time.sleep(0.2)
     print("Bottom Seeking.....")
     i+=1
@@ -115,7 +115,7 @@ print(value)
 
 sb_lib.sendMsg(ser, "41 1 15")
 j = 0
-while sb_lib.getSBdata(sb_lib.sendMsg(ser, "41 2")) != 15 and j < 100:
+while sb_lib.getSBdata(sb_lib.sendMsg(ser, "41 2")) != 15 and j < 85:
     time.sleep(.2)
     j+=1
     
@@ -143,7 +143,7 @@ endpos = firstpos + 400
 
 j = 0
 sb_lib.sendMsg(ser, "41 1 2")
-while sb_lib.getSBdata(sb_lib.sendMsg(ser, "41 2")) != 2 and j<100:
+while sb_lib.getSBdata(sb_lib.sendMsg(ser, "41 2")) != 2 and j < 85:
     time.sleep(.2)
     j += 1
     
