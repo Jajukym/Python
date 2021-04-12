@@ -1,4 +1,5 @@
 {
+  "PIP":  "416694",
   "Setup": "1.将4针的一侧连接至4针连接器至EQF1255，另一侧连接至电源板上的HD3或HD4\n2. EQF1017的连接器电源和HD6的2针转速连接器。或者将簧片线插入HD6\n3.将提升电机主线束连接到HD2\n4.将提升电机霍尔效应传感器连接到HD8（可能需要3个MTA引脚延长线）\n5.将电阻电机连接到电源板的HD7\n6.将电源线热连接到LG1，将中性线连接到LG3，然后接地到LG2 1. Connect one side of 4 pin to 4 pin connector to EQF1255 and other side to HD3 or HD4 on power board\n2. Connector power supply to EQF1017 and 2 pin tach connector to HD6. Or plug in reed wire to HD6\n3. Connect lift motor main harness to HD2\n4. Connect lift motor hall effect sensor to HD8 (may need 3 MTA pin wire extension)\n5. Connect resistance motor to HD7 of power board\n6. Connect power cord hot to LG1, neutral to LG3, and ground to LG2",
   "SetupImage1": "",
   "SetupImage2": "",
