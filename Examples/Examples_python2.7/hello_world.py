@@ -3,7 +3,7 @@
 counter = 100
 miles = 1000.0
 name = "John"
-print "Hello, Python!"
-print counter
-print miles
-print name
+print ("Hello, Python!")
+print (counter)
+print (miles)
+print (name)

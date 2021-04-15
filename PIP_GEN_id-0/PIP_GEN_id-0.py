@@ -8,8 +8,8 @@ import openpyxl #create a workbook
 from openpyxl.workbook import Workbook #inserting line in workbook
 from openpyxl import load_workbook
 from openpyxl.worksheet import *
-from openpyxl.cell import  Cell
-from openpyxl.utils import get_column_letter, column_index_from_string, coordinate_from_string
+from openpyxl.cell import Cell
+from openpyxl.utils.cell import get_column_letter, column_index_from_string, coordinate_from_string
 from openpyxl.styles import PatternFill, Border, Side, Alignment, Protection, Font, Color, colors
 import json
 

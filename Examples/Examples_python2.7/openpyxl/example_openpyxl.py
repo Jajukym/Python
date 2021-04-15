@@ -18,34 +18,34 @@ wb = load_workbook('C:\Python27\MyScripts\Examples\Parts - Consoles.csv.xlsx')
 #sheet info
 print(wb.get_sheet_names())
 sheet = wb.get_sheet_by_name('Parts - Consoles.csv')
-print sheet.title
+print (sheet.title)
 anotherSheet = wb.active
-print anotherSheet
+print (anotherSheet)
 
 #cell info 1
-print sheet['H8'].value
+print (sheet['H8'].value)
 
-c = sheet['B4']
-print c.row
-print c.column
-print c.coordinate
+c = (sheet['B4'])
+print (c.row)
+print (c.column)
+print (c.coordinate)
 
 #cell info 2
-print sheet.cell(row=6, column=9).value
+print (sheet.cell(row=6, column=9).value)
 for i in range(1, 5):
     print(i, sheet.cell(row=i, column=7).value)
     
 #openpyxl.utils
-print get_column_letter(1)
-print column_index_from_string('A')
+print (get_column_letter(1))
+print (column_index_from_string('A'))
 
 for cellObj in sheet['A1' : 'C3']:
     for cell in cellObj:
         print(cell.coordinate, cell.value)
     print('---END---')
     
-print sheet.max_row
-print sheet.max_column
+print (sheet.max_row)
+print (sheet.max_column)
 
 #create and write to new file with openpyxl
 mywb = openpyxl.Workbook() #creates a sheet
@@ -70,9 +70,9 @@ ms['A2'] = varst
 mywb.save('New_xlsx_File.xlsx') #save new workbook
 
 print(mywb.get_sheet_names())
-print ms['H8'].value
-print ms['A1'].value
-print ms['A2'].value
+print(ms['H8'].value)
+print(ms['A1'].value)
+print(ms['A2'].value)
 
 #another create with openpyxl examples
 wb = Workbook()
